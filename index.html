@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///H:/Downloads/rss-service-menu.html -->
+<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIHR RSS — SME Service Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --color-bg:#f0f4f8;
+  --color-surface:#ffffff;
+  --color-surface-2:#f7f9fb;
+  --color-border:#dde3ea;
+  --color-text:#1a2636;
+  --color-text-muted:#5a6a7a;
+  --color-text-faint:#9aaabb;
+  --color-primary:#005f8a;
+  --color-primary-hover:#004d72;
+  --color-primary-highlight:#dceef7;
+  --color-lane-a:#1565C0;
+  --color-lane-b:#2E7D32;
+  --color-lane-c:#6A1B9A;
+  --color-urgent:#B71C1C;
+  --color-urgent-bg:#fdecea;
+  --color-gold:#b07a00;
+  --color-gold-bg:#fdf8e1;
+  --font-body:'DM Sans',sans-serif;
+  --font-display:'DM Serif Display',Georgia,serif;
+  --radius-sm:0.375rem;
+  --radius-md:0.5rem;
+  --radius-lg:0.75rem;
+  --radius-xl:1rem;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.07);
+  --shadow-md:0 4px 12px rgba(0,0,0,0.09);
+  --text-xs:clamp(0.75rem,0.7rem + 0.2vw,0.8125rem);
+  --text-sm:clamp(0.8125rem,0.77rem + 0.25vw,0.9375rem);
+  --text-base:clamp(0.9375rem,0.88rem + 0.3vw,1.0625rem);
+  --text-lg:clamp(1.0625rem,1rem + 0.4vw,1.25rem);
+  --text-xl:clamp(1.25rem,1.1rem + 0.75vw,1.625rem);
+  --space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;--space-4:1rem;
+  --space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;
+}
+[data-theme="dark"]{
+  --color-bg:#0f1923;
+  --color-surface:#162130;
+  --color-surface-2:#1c2b3a;
+  --color-border:#253447;
+  --color-text:#d0dae5;
+  --color-text-muted:#6b8099;
+  --color-text-faint:#3d5268;
+  --color-primary:#4fa3cc;
+  --color-primary-hover:#73bad9;
+  --color-primary-highlight:#1a3348;
+  --color-lane-a:#5b8ee6;
+  --color-lane-b:#66bb6a;
+  --color-lane-c:#ba68c8;
+  --color-urgent:#ef5350;
+  --color-urgent-bg:#2a1515;
+  --color-gold:#f0c040;
+  --color-gold-bg:#2a2410;
+}
+body{font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);min-height:100dvh;line-height:1.6;}
+img,svg{display:block;max-width:100%;}
+button{cursor:pointer;font:inherit;color:inherit;}
+a,button,[role="button"]{transition:color 180ms ease,background 180ms ease,border-color 180ms ease,box-shadow 180ms ease;}
+
+/* ── HEADER ── */
+.app-header{background:var(--color-surface);border-bottom:1px solid var(--color-border);padding:var(--space-3) var(--space-8);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:var(--shadow-sm);}
+.header-brand{display:flex;align-items:center;gap:var(--space-3);}
+.header-logo{display:flex;align-items:center;gap:var(--space-2);}
+.brand-name{font-family:var(--font-display);font-size:var(--text-lg);color:var(--color-primary);letter-spacing:-0.01em;}
+.brand-sub{font-size:var(--text-xs);color:var(--color-text-muted);margin-top:-2px;}
+.theme-toggle{background:none;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-2);color:var(--color-text-muted);display:flex;align-items:center;}
+.theme-toggle:hover{background:var(--color-surface-2);color:var(--color-text);}
+
+/* ── MAIN ── */
+.main-container{max-width:1200px;margin:0 auto;padding:var(--space-8) var(--space-6);}
+
+/* ── PAGE TITLE ── */
+.page-header{margin-bottom:var(--space-8);}
+.page-header h1{font-family:var(--font-display);font-size:var(--text-xl);color:var(--color-text);margin-bottom:var(--space-2);}
+.page-header p{font-size:var(--text-sm);color:var(--color-text-muted);max-width:70ch;}
+
+/* ── SERVICE REQUEST PANEL ── */
+.service-request-panel{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-6);margin-bottom:var(--space-8);box-shadow:var(--shadow-sm);}
+.panel-title{font-size:var(--text-lg);font-weight:600;color:var(--color-text);margin-bottom:var(--space-1);}
+.panel-sub{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-5);}
+.request-form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:var(--space-4);align-items:end;}
+@media(max-width:768px){.request-form{grid-template-columns:1fr;}}
+.form-group{display:flex;flex-direction:column;gap:var(--space-2);}
+.form-group label{font-size:var(--text-xs);font-weight:600;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.05em;}
+.form-select{background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);font-size:var(--text-sm);color:var(--color-text);width:100%;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b8099' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right var(--space-3) center;}
+.form-select:focus{outline:2px solid var(--color-primary);outline-offset:2px;border-color:var(--color-primary);}
+.btn-request{background:var(--color-primary);color:#fff;border:none;border-radius:var(--radius-md);padding:var(--space-3) var(--space-6);font-size:var(--text-sm);font-weight:600;white-space:nowrap;}
+.btn-request:hover{background:var(--color-primary-hover);}
+
+/* ── REQUEST RESULT ── */
+.request-result{display:none;margin-top:var(--space-5);background:var(--color-primary-highlight);border:1px solid var(--color-primary);border-radius:var(--radius-lg);padding:var(--space-5);}
+.request-result.visible{display:block;}
+.result-title{font-weight:700;font-size:var(--text-base);color:var(--color-primary);margin-bottom:var(--space-3);}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);}
+@media(max-width:600px){.result-grid{grid-template-columns:1fr;}}
+.result-item label{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--color-text-muted);display:block;margin-bottom:var(--space-1);}
+.result-item p{font-size:var(--text-sm);color:var(--color-text);}
+.result-item p strong{color:var(--color-urgent);font-weight:700;}
+
+/* ── PROGRAMMES TABLE ── */
+.table-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-sm);margin-bottom:var(--space-8);}
+.table-header-bar{background:linear-gradient(135deg,#1A3A5C 0%,#005f8a 100%);padding:var(--space-4) var(--space-6);display:flex;align-items:center;justify-content:space-between;}
+.table-header-bar h2{font-family:var(--font-display);font-size:var(--text-lg);color:#fff;}
+.filter-pills{display:flex;gap:var(--space-2);flex-wrap:wrap;}
+.pill{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;border-radius:var(--radius-full);padding:var(--space-1) var(--space-3);font-size:var(--text-xs);font-weight:600;cursor:pointer;transition:background 180ms;}
+.pill:hover,.pill.active{background:rgba(255,255,255,0.3);}
+.pill[data-lane="a"].active{background:var(--color-lane-a);}
+.pill[data-lane="b"].active{background:var(--color-lane-b);}
+.pill[data-lane="c"].active{background:var(--color-lane-c);}
+.table-wrapper{overflow-x:auto;}
+table{border-collapse:collapse;width:100%;font-size:var(--text-sm);}
+thead th{background:var(--color-surface-2);padding:var(--space-3) var(--space-4);text-align:left;font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--color-text-muted);border-bottom:2px solid var(--color-border);white-space:nowrap;}
+tbody tr{border-bottom:1px solid var(--color-border);transition:background 120ms;}
+tbody tr:hover{background:var(--color-surface-2);}
+tbody tr:last-child{border-bottom:none;}
+tbody td{padding:var(--space-3) var(--space-4);vertical-align:top;}
+.prog-name{font-weight:600;color:var(--color-text);}
+.prog-desc{font-size:var(--text-xs);color:var(--color-text-muted);margin-top:2px;}
+.lane-badge{display:inline-flex;align-items:center;padding:2px var(--space-2);border-radius:var(--radius-full);font-size:var(--text-xs);font-weight:700;color:#fff;white-space:nowrap;}
+.lane-a{background:var(--color-lane-a);}
+.lane-b{background:var(--color-lane-b);}
+.lane-c{background:var(--color-lane-c);}
+.award-chip{font-weight:600;color:var(--color-gold);}
+.trl-chip{font-size:var(--text-xs);color:var(--color-text-muted);}
+tr.hidden-row{display:none;}
+
+/* ── SPECIALIST SUPPORT GRID ── */
+.support-grid-section{margin-bottom:var(--space-8);}
+.section-title{font-family:var(--font-display);font-size:var(--text-lg);color:var(--color-text);margin-bottom:var(--space-2);}
+.section-sub{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-5);}
+.support-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-4);}
+.support-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);}
+.support-card-icon{width:36px;height:36px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-3);}
+.support-card h3{font-size:var(--text-base);font-weight:700;color:var(--color-text);margin-bottom:var(--space-2);}
+.support-card p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.5;}
+.support-card .timing-note{margin-top:var(--space-3);padding:var(--space-2) var(--space-3);background:var(--color-urgent-bg);border-left:3px solid var(--color-urgent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:var(--text-xs);color:var(--color-urgent);font-weight:600;}
+.ic0{background:#e3f0fb;color:#1565C0;}
+.ic1{background:#e8f5e9;color:#2E7D32;}
+.ic2{background:#f3e5f5;color:#6A1B9A;}
+.ic3{background:#fff3e0;color:#e65100;}
+.ic4{background:#fce4ec;color:#880e4f;}
+.ic5{background:#e0f7fa;color:#006064;}
+[data-theme="dark"] .ic0{background:#1a2a40;color:#5b8ee6;}
+[data-theme="dark"] .ic1{background:#1a2d1a;color:#66bb6a;}
+[data-theme="dark"] .ic2{background:#2a1a2d;color:#ba68c8;}
+[data-theme="dark"] .ic3{background:#2d2010;color:#ffa040;}
+[data-theme="dark"] .ic4{background:#2d1a22;color:#f48fb1;}
+[data-theme="dark"] .ic5{background:#0d2426;color:#4dd0e1;}
+
+/* ── SOCIAL CARE CALLOUT ── */
+.callout{background:var(--color-gold-bg);border:1px solid var(--color-gold);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-6);}
+.callout h3{font-size:var(--text-base);font-weight:700;color:var(--color-gold);margin-bottom:var(--space-2);}
+.callout p{font-size:var(--text-sm);color:var(--color-text);}
+
+/* ── MOU FOOTER ── */
+.mou-bar{background:var(--color-primary-highlight);border:1px solid var(--color-primary);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-6);display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;}
+.mou-label{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-primary);white-space:nowrap;}
+.mou-items{display:flex;gap:var(--space-2);flex-wrap:wrap;}
+.mou-chip{background:var(--color-primary);color:#fff;border-radius:var(--radius-full);padding:2px var(--space-3);font-size:var(--text-xs);font-weight:600;}
+
+:root{--radius-full:9999px;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="app-header">
+  <div class="header-brand">
+    <div class="header-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-label="NIHR RSS logo">
+        <rect width="32" height="32" rx="8" fill="#005f8a"></rect>
+        <rect x="5" y="8" width="5" height="16" rx="1.5" fill="white"></rect>
+        <rect x="13" y="8" width="5" height="16" rx="1.5" fill="white"></rect>
+        <path d="M21 8h5v16h-5V8z" rx="1.5" fill="rgba(255,255,255,0.4)"></path>
+        <rect x="21" y="8" width="5" height="7" rx="1.5" fill="white"></rect>
+      </svg>
+    </div>
+    <div>
+      <div class="brand-name">NIHR RSS</div>
+      <div class="brand-sub">SME Industry Support — Service Menu</div>
+    </div>
+  </div>
+  <button class="theme-toggle" data-theme-toggle="" aria-label="Switch to dark mode">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+  </button>
+</header>
+
+<main class="main-container">
+
+  <!-- PAGE TITLE -->
+  <div class="page-header">
+    <h1>Programme &amp; Support Directory</h1>
+    <p>Use the service request selector below to identify the right type of support for your stage. Browse all NIHR programmes, funding values, and lane assignments in the directory.</p>
+  </div>
+
+  <!-- SERVICE REQUEST PANEL -->
+  <div class="service-request-panel">
+    <div class="panel-title">Request RSS Support</div>
+    <div class="panel-sub">Select your programme and the type of support you need — we will show you what's available and when to engage.</div>
+    <div class="request-form">
+      <div class="form-group">
+        <label for="sel-programme">Programme</label>
+        <select id="sel-programme" class="form-select">
+          <option value="">— Select programme —</option>
+          <option value="thrive">i4i THRIVE</option>
+          <option value="fast">i4i FAST</option>
+          <option value="pda">i4i Programme Development Award</option>
+          <option value="ic">Innovation Catalyst</option>
+          <option value="biomedical">Biomedical Catalyst</option>
+          <option value="rfpb">Research for Patient Benefit (RfPB)</option>
+          <option value="hta">Health Technology Assessment (HTA)</option>
+          <option value="hta-ada">HTA Application Development Award</option>
+          <option value="eme">Efficacy &amp; Mechanism Evaluation (EME)</option>
+          <option value="phr">Public Health Research (PHR)</option>
+          <option value="sbri">SBRI Healthcare</option>
+          <option value="sscr">Social Care (SSCR / PHR Social Care)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel-support">Type of Support</label>
+        <select id="sel-support" class="form-select">
+          <option value="">— Select support type —</option>
+          <option value="ppie">PPIE &amp; Co-Design</option>
+          <option value="clinical">Clinical Trials Methodology</option>
+          <option value="stats">Statistics &amp; Data Science</option>
+          <option value="he">Health Economics (from conception)</option>
+          <option value="full-review">Full Application Review (4–6 weeks before close)</option>
+          <option value="summary-review">Summary Review (2 weeks before close)</option>
+          <option value="scoping">Initial Scoping Consultation</option>
+          <option value="study-design">Study Design &amp; Protocol</option>
+          <option value="commercialisation">Commercialisation &amp; TTO</option>
+          <option value="ai-digital">AI / Digital / Robotics</option>
+          <option value="regulatory">Cyber &amp; Regulatory (UKCA/MDR)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel-stage">Your Stage</label>
+        <select id="sel-stage" class="form-select">
+          <option value="">— Select stage —</option>
+          <option value="early">Early (TRL 3–4 / Idea stage)</option>
+          <option value="dev">Development (TRL 4–7)</option>
+          <option value="scale">Evidence &amp; Scale (TRL 7+)</option>
+        </select>
+      </div>
+      <button class="btn-request" onclick="showRequest()">Show guidance →</button>
+    </div>
+
+    <div class="request-result" id="request-result">
+      <div class="result-title" id="result-title">Support Guidance</div>
+      <div class="result-grid" id="result-grid"></div>
+    </div>
+  </div>
+
+  <!-- SPECIALIST SUPPORT GRID -->
+  <div class="support-grid-section">
+    <h2 class="section-title">Specialist Support Available</h2>
+    <p class="section-sub">All support is free and confidential. Engagement timings below are guidance — contact the RSS as early as possible for all programmes.</p>
+    <div class="support-grid">
+
+      <div class="support-card">
+        <div class="support-card-icon ic0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <h3>PPIE &amp; Co-Design</h3>
+        <p>Patient and public involvement and engagement strategy, co-design workshops, lived experience integration, and endpoint development with communities.</p>
+        <div class="timing-note">⏱ Engage from conception — PPIE must be built into research design, not added at submission</div>
+      </div>
+
+      <div class="support-card">
+        <div class="support-card-icon ic1">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        </div>
+        <h3>Clinical Trials Methodology</h3>
+        <p>Trial design (RCT, pragmatic, adaptive), protocol development, feasibility and pilot study planning, MHRA/CTR considerations, and site selection support.</p>
+        <div class="timing-note">⏱ Engage at study design stage — at least 3–4 months before submission</div>
+      </div>
+
+      <div class="support-card">
+        <div class="support-card-icon ic2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        </div>
+        <h3>Statistics &amp; Data Science</h3>
+        <p>Sample size calculation, statistical analysis plan, power calculations, data management, routine data and EHR linkage, real-world evidence design.</p>
+        <div class="timing-note">⏱ Engage at study design stage — at least 3 months before submission</div>
+      </div>
+
+      <div class="support-card">
+        <div class="support-card-icon ic3">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        </div>
+        <h3>Health Economics</h3>
+        <p>Economic model development (CEA, CUA, CBA), cost-effectiveness alongside trial, budget impact analysis, NICE HTA modelling, and NHS adoption evidence.</p>
+        <div class="timing-note">⏱ Must be built in from conception — not retrospective. Engage at earliest opportunity</div>
+      </div>
+
+      <div class="support-card">
+        <div class="support-card-icon ic4">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        </div>
+        <h3>Full Application Review</h3>
+        <p>Detailed peer review of full draft application including narrative, economic case, methodology, PPIE section, and lay summary. Prioritised feedback aligned to scoring criteria.</p>
+        <div class="timing-note">⏱ Submit draft to RSS 4–6 weeks before funding deadline</div>
+      </div>
+
+      <div class="support-card">
+        <div class="support-card-icon ic5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </div>
+        <h3>Summary Review</h3>
+        <p>Light-touch review of near-final application focusing on clarity, impact statement, lay summary, and headline scoring criteria. Rapid turnaround.</p>
+        <div class="timing-note">⏱ Submit draft to RSS 2 weeks before funding deadline</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PROGRAMMES TABLE -->
+  <div class="table-card">
+    <div class="table-header-bar">
+      <h2>NIHR Programmes Directory</h2>
+      <div class="filter-pills">
+        <button class="pill active" data-lane="all" onclick="filterLane(&#39;all&#39;,this)">All</button>
+        <button class="pill" data-lane="a" onclick="filterLane(&#39;a&#39;,this)">Lane A</button>
+        <button class="pill" data-lane="b" onclick="filterLane(&#39;b&#39;,this)">Lane B</button>
+        <button class="pill" data-lane="c" onclick="filterLane(&#39;c&#39;,this)">Lane C</button>
+      </div>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Programme</th>
+            <th>Max Award</th>
+            <th>TRL Range</th>
+            <th>Lane</th>
+          </tr>
+        </thead>
+        <tbody id="prog-table-body">
+          <tr data-lane="a">
+            <td><div class="prog-name">i4i THRIVE</div><div class="prog-desc">Feasibility and early development — up to 9 months</div></td>
+            <td><span class="award-chip">Up to £150k</span></td>
+            <td><span class="trl-chip">TRL 3–5</span></td>
+            <td><span class="lane-badge lane-a">Lane A</span></td>
+          </tr>
+          <tr data-lane="a">
+            <td><div class="prog-name">i4i FAST</div><div class="prog-desc">Rolling themed competitions for faster translation</div></td>
+            <td><span class="award-chip">Up to £100k</span></td>
+            <td><span class="trl-chip">TRL 5+</span></td>
+            <td><span class="lane-badge lane-a">Lane A</span></td>
+          </tr>
+          <tr data-lane="a">
+            <td><div class="prog-name">SBRI Healthcare</div><div class="prog-desc">Commissioner-led challenge competitions</div></td>
+            <td><span class="award-chip">Varies</span></td>
+            <td><span class="trl-chip">TRL 3–6</span></td>
+            <td><span class="lane-badge lane-a">Lane A</span></td>
+          </tr>
+          <tr data-lane="a b">
+            <td><div class="prog-name">Biomedical Catalyst</div><div class="prog-desc">UKRI-NIHR joint fund for biomedical innovation</div></td>
+            <td><span class="award-chip">Up to £2m</span></td>
+            <td><span class="trl-chip">TRL 3–7</span></td>
+            <td><span class="lane-badge lane-a">Lane A–B</span></td>
+          </tr>
+          <tr data-lane="b">
+            <td><div class="prog-name">i4i Programme Development Award</div><div class="prog-desc">Full development award for definitive evidence generation</div></td>
+            <td><span class="award-chip">Up to £2m</span></td>
+            <td><span class="trl-chip">TRL 5–7</span></td>
+            <td><span class="lane-badge lane-b">Lane B</span></td>
+          </tr>
+          <tr data-lane="b">
+            <td><div class="prog-name">Innovation Catalyst</div><div class="prog-desc">NHS-embedded innovation with adoption pathway — rolling</div></td>
+            <td><span class="award-chip">No cap</span></td>
+            <td><span class="trl-chip">TRL 5+</span></td>
+            <td><span class="lane-badge lane-b">Lane B</span></td>
+          </tr>
+          <tr data-lane="b">
+            <td><div class="prog-name">Research for Patient Benefit (RfPB)</div><div class="prog-desc">Applied research focused on NHS implementation</div></td>
+            <td><span class="award-chip">Up to £500k</span></td>
+            <td><span class="trl-chip">TRL 4–6</span></td>
+            <td><span class="lane-badge lane-b">Lane B</span></td>
+          </tr>
+          <tr data-lane="b c">
+            <td><div class="prog-name">Efficacy &amp; Mechanism Evaluation (EME)</div><div class="prog-desc">Experimental medicine and mechanism studies</div></td>
+            <td><span class="award-chip">Varies</span></td>
+            <td><span class="trl-chip">TRL 5–8</span></td>
+            <td><span class="lane-badge lane-b">Lane B–C</span></td>
+          </tr>
+          <tr data-lane="c">
+            <td><div class="prog-name">Health Technology Assessment (HTA)</div><div class="prog-desc">Researcher-led assessments — rolling year-round</div></td>
+            <td><span class="award-chip">Varies</span></td>
+            <td><span class="trl-chip">TRL 7–9</span></td>
+            <td><span class="lane-badge lane-c">Lane C</span></td>
+          </tr>
+          <tr data-lane="c">
+            <td><div class="prog-name">HTA Application Development Award</div><div class="prog-desc">Supports development of a full HTA submission</div></td>
+            <td><span class="award-chip">Varies</span></td>
+            <td><span class="trl-chip">TRL 7+</span></td>
+            <td><span class="lane-badge lane-c">Lane C</span></td>
+          </tr>
+          <tr data-lane="c">
+            <td><div class="prog-name">Public Health Research (PHR)</div><div class="prog-desc">Evaluating public health and social care interventions</div></td>
+            <td><span class="award-chip">Up to £500k</span></td>
+            <td><span class="trl-chip">TRL 5–8</span></td>
+            <td><span class="lane-badge lane-c">Lane C</span></td>
+          </tr>
+          <tr data-lane="b c">
+            <td><div class="prog-name">Social Care (SSCR / PHR)</div><div class="prog-desc">Social care evidence — CICs and social enterprises eligible</div></td>
+            <td><span class="award-chip">Up to £500k</span></td>
+            <td><span class="trl-chip">TRL 4–8</span></td>
+            <td><span class="lane-badge lane-b">B–C</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SOCIAL CARE CALLOUT -->
+  <div class="callout">
+    <h3>⚠ Social Care SME Pathway — Important Note</h3>
+    <p>Community Interest Companies (CICs), social enterprises, and social entrepreneurs in the Health and Life Sciences sector ARE eligible SMEs where they meet the SME definition (&lt;250 employees, &lt;€50m turnover). SSCR, PHR, RfPB, i4i, and Innovation Catalyst are all open to this cohort. Contact the RSS for a scoping consultation to confirm eligibility and identify the best route.</p>
+  </div>
+
+  <!-- MOU BAR -->
+  <div class="mou-bar">
+    <div class="mou-label">One NIHR Network</div>
+    <div class="mou-items">
+      <span class="mou-chip">NIHR HRC Network</span>
+      <span class="mou-chip">Health Innovation Networks</span>
+      <span class="mou-chip">Innovate UK</span>
+      <span class="mou-chip">ICBs</span>
+      <span class="mou-chip">HEI TTOs</span>
+      <span class="mou-chip">DHSC Life Sciences</span>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// Theme toggle
+(function(){
+  const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
+  let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+  r.setAttribute('data-theme',d);
+  t&&t.addEventListener('click',()=>{
+    d=d==='dark'?'light':'dark';
+    r.setAttribute('data-theme',d);
+    t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode');
+    t.innerHTML=d==='dark'?
+      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':
+      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  });
+})();
+
+// Lane filter
+function filterLane(lane, btn) {
+  document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#prog-table-body tr').forEach(row=>{
+    if(lane==='all'){row.classList.remove('hidden-row');return;}
+    const lanes=row.dataset.lane||'';
+    row.classList.toggle('hidden-row',!lanes.includes(lane));
+  });
+}
+
+// Support request guidance
+const supportData = {
+  ppie:{
+    when:'From conception — must be embedded in research design',
+    lead:'Professor-level PPIE specialist via your RSS Hub',
+    note:'PPIE is a scored criterion in all NIHR programmes. Late engagement significantly weakens applications.',
+    urgent:true
+  },
+  clinical:{
+    when:'At study design stage — at least 3–4 months before deadline',
+    lead:'Clinical Trials methodology expert via RSS Hub',
+    note:'Includes RCT design, protocol, MHRA/CTR requirements and site selection.',
+    urgent:false
+  },
+  stats:{
+    when:'At study design stage — at least 3 months before deadline',
+    lead:'Statistician / Data Scientist via RSS Hub',
+    note:'Covers sample size, SAP, power calculations and data linkage.',
+    urgent:false
+  },
+  he:{
+    when:'From conception — must be built into the research design',
+    lead:'Health Economist via RSS Hub (professor-level)',
+    note:'Economic evaluation is a core requirement. Retrospective modelling is not acceptable to NIHR panels.',
+    urgent:true
+  },
+  'full-review':{
+    when:'Submit draft to RSS 4–6 weeks before funding deadline',
+    lead:'Senior RSS Reviewer',
+    note:'Full peer review of all sections aligned to scoring criteria. Allow time for revisions.',
+    urgent:false
+  },
+  'summary-review':{
+    when:'Submit draft to RSS 2 weeks before funding deadline',
+    lead:'RSS Reviewer',
+    note:'Light-touch review focused on clarity, impact, and lay summary. Rapid turnaround.',
+    urgent:false
+  },
+  scoping:{
+    when:'Any time — contact RSS as early as possible',
+    lead:'RSS Programme Specialist',
+    note:'Free initial consultation to assess eligibility, programme fit, and TRL readiness.',
+    urgent:false
+  },
+  'study-design':{
+    when:'3–4 months before deadline',
+    lead:'Methodology Specialist via RSS Hub',
+    note:'Study design, PICO, endpoints, and trial/evaluation framework.',
+    urgent:false
+  },
+  commercialisation:{
+    when:'Post-award or when approaching TRL 7+',
+    lead:'RSS Enterprise & Innovation team / HEI TTO',
+    note:'IP strategy, licensing, spinout support, and investor-ready evidence packages.',
+    urgent:false
+  },
+  'ai-digital':{
+    when:'At study design or application stage',
+    lead:'AI/Digital/Robotics specialist via RSS Hub',
+    note:'Digital health methodology, AI validation, and DTAC/DCB0129 regulatory guidance.',
+    urgent:false
+  },
+  regulatory:{
+    when:'Early-stage — before submission',
+    lead:'Regulatory specialist via RSS Hub',
+    note:'UKCA, MDR, Cyber Essentials, DSPT, and DTAC compliance support.',
+    urgent:false
+  }
+};
+
+function showRequest(){
+  const prog=document.getElementById('sel-programme').value;
+  const support=document.getElementById('sel-support').value;
+  const stage=document.getElementById('sel-stage').value;
+  const result=document.getElementById('request-result');
+  const grid=document.getElementById('result-grid');
+  const title=document.getElementById('result-title');
+
+  if(!prog&&!support&&!stage){result.classList.remove('visible');return;}
+
+  const sd=supportData[support]||{when:'Contact your RSS Hub to discuss',lead:'RSS Programme Specialist',note:'',urgent:false};
+  const stageLabel={early:'Lane A — Early Stage (TRL 3+)',dev:'Lane B — Development (TRL 4–7)',scale:'Lane C — Evidence & Scale (TRL 7+)'}[stage]||'Not specified';
+
+  const progLabels={
+    thrive:'i4i THRIVE',fast:'i4i FAST',pda:'i4i Programme Development Award',
+    ic:'Innovation Catalyst',biomedical:'Biomedical Catalyst',rfpb:'RfPB',
+    hta:'HTA Researcher-Led',htaada:'HTA App Dev Award',eme:'EME',
+    phr:'PHR',sbri:'SBRI Healthcare',sscr:'Social Care (SSCR / PHR)'
+  };
+
+  title.textContent='Support Guidance'+(prog?' — '+(progLabels[prog]||prog):'');
+
+  grid.innerHTML=`
+    <div class="result-item"><label>When to Engage</label><p>${sd.urgent?'<strong>⚠ URGENT — '+sd.when+'</strong>':sd.when}</p></div>
+    <div class="result-item"><label>Who to Contact</label><p>${sd.lead}</p></div>
+    <div class="result-item"><label>Your Stage</label><p>${stageLabel}</p></div>
+    <div class="result-item"><label>Note</label><p>${sd.note||'Contact your regional RSS Hub for a tailored scoping conversation.'}</p></div>
+  `;
+  result.classList.add('visible');
+  result.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+
+</body></html>
