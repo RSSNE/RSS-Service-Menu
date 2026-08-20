@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIHR Research Support Service (RSS) — Guide for SMEs</title>
+<style>
+  :root{
+    --navy:#1b2a5e;
+    --red:#e2231a;
+    --lightblue:#eaf3fb;
+    --grey:#f4f5f7;
+    --text:#222;
+  }
+  *{box-sizing:border-box;}
+  body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    margin:0;
+    color:var(--text);
+    line-height:1.6;
+    background:#fff;
+  }
+  header{
+    background:var(--navy);
+    color:#fff;
+    padding:40px 20px;
+    text-align:center;
+  }
+  header .logo{
+    font-weight:bold;
+    font-size:1.2rem;
+    letter-spacing:1px;
+  }
+  header .logo span{color:var(--red);}
+  header h1{
+    font-size:2.2rem;
+    margin:20px 0 10px;
+  }
+  header p.subtitle{
+    font-style:italic;
+    font-size:1.1rem;
+    margin:0;
+    color:#dfe6f5;
+  }
+  header p.version{
+    font-size:0.9rem;
+    margin-top:20px;
+    color:#b9c4e0;
+  }
+  nav{
+    background:var(--grey);
+    padding:15px 20px;
+    text-align:center;
+    border-bottom:3px solid var(--navy);
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  nav a{
+    color:var(--navy);
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:600;
+    font-size:0.9rem;
+  }
+  nav a:hover{
+    color:var(--red);
+    text-decoration:underline;
+  }
+  main{
+    max-width:1000px;
+    margin:0 auto;
+    padding:0 20px 60px;
+  }
+  section{
+    padding:40px 0;
+    border-bottom:1px solid #e0e0e0;
+  }
+  section h2{
+    background:var(--navy);
+    color:#fff;
+    padding:14px 20px;
+    border-radius:4px;
+    font-size:1.4rem;
+    margin-bottom:20px;
+  }
+  section h3{
+    color:var(--navy);
+    border-left:4px solid var(--red);
+    padding-left:10px;
+    margin-top:30px;
+  }
+  .callout{
+    background:var(--lightblue);
+    border-left:4px solid var(--navy);
+    padding:15px 20px;
+    margin:20px 0;
+    border-radius:4px;
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:20px 0;
+    font-size:0.92rem;
+  }
+  table caption{
+    text-align:left;
+    font-weight:600;
+    color:var(--navy);
+    margin-bottom:8px;
+  }
+  th, td{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+  }
+  th{
+    background:var(--navy);
+    color:#fff;
+  }
+  tr:nth-child(even){
+    background:var(--grey);
+  }
+  ul, ol{
+    padding-left:22px;
+  }
+  li{
+    margin-bottom:6px;
+  }
+  .journey-step{
+    display:flex;
+    gap:20px;
+    margin-bottom:15px;
+    align-items:flex-start;
+  }
+  .journey-num{
+    background:var(--red);
+    color:#fff;
+    border-radius:50%;
+    min-width:34px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    flex-shrink:0;
+  }
+  .faq-item{
+    margin-bottom:18px;
+    padding:15px;
+    background:var(--grey);
+    border-radius:6px;
+  }
+  .faq-item strong{
+    color:var(--navy);
+    display:block;
+    margin-bottom:6px;
+  }
+  .trl-badge{
+    display:inline-block;
+    background:var(--navy);
+    color:#fff;
+    padding:2px 10px;
+    border-radius:12px;
+    font-size:0.85rem;
+    font-weight:600;
+  }
+  footer{
+    background:var(--navy);
+    color:#dfe6f5;
+    text-align:center;
+    padding:30px 20px;
+    font-size:0.9rem;
+  }
+  footer a{
+    color:#fff;
+    text-decoration:underline;
+  }
+  .back-top{
+    display:inline-block;
+    margin-top:20px;
+    font-size:0.85rem;
+    color:var(--navy);
+    text-decoration:none;
+  }
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  @media (max-width:700px){
+    .two-col{grid-template-columns:1fr;}
+    header h1{font-size:1.6rem;}
+    table{font-size:0.8rem;}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="logo">NIHR <span>|</span> Research Support Service</div>
+  <h1>NIHR Research Support Service (RSS)</h1>
+  <p class="subtitle">How we can support your innovation from research design to NHS adoption</p>
+  <p class="version">Working with the RSS: A Guide for SMEs &nbsp;|&nbsp; Version 1.0 &nbsp;|&nbsp; July 2026</p>
+</header>
+
+<nav>
+  <a href="#section1">What is RSS?</a>
+  <a href="#section2">Eligibility</a>
+  <a href="#section3">Scope</a>
+  <a href="#section4">Your Journey</a>
+  <a href="#section5">What to Expect</a>
+  <a href="#section6">FAQs</a>
+  <a href="#section7">TRL</a>
+  <a href="#section8">Funding</a>
+  <a href="#appendixA">Directory</a>
+  <a href="#appendixB">Engagement Form</a>
+</nav>
+
+<main>
+
+<section id="section1">
+  <h2>Section 1: What is the NIHR Research Support Service?</h2>
+  <p>The NIHR Research Support Service (RSS) is a free, expert service that helps researchers — including companies like yours — design and deliver high-quality health and care research. We work with people developing products, technologies, services, and care models that have the potential to improve outcomes for patients and the public.</p>
+  <p>We are not a funding body. We do not award grants. What we do is help you build the strongest possible research evidence base, so that when you apply for NIHR funding or other investment, your proposal is rigorous, credible, and competitive.</p>
+  <div class="callout"><strong>In short:</strong> we help you ask the right research question, in the right way, with the right evidence, before you submit your funding application.</div>
+
+  <h3>Who delivers the RSS?</h3>
+  <p>The RSS is delivered through eight regional Hubs and a set of national Specialist Centres. Each Hub brings together leading universities, research organisations, and NHS partners — giving you access to local support with national expertise. The RSS is funded by the National Institute for Health and Care Research (NIHR), part of the Department of Health and Social Care.</p>
+
+  <h3>Why does the RSS work with companies?</h3>
+  <p>Health and care innovation increasingly comes from companies — particularly SMEs developing diagnostics, medical devices, digital health tools, therapeutics, and social care technologies. Independent, rigorous research evidence is what NHS commissioners, NICE, and procurement decision-makers require before adopting new technologies. We help you generate that evidence.</p>
+
+  <h3>Is the service really free?</h3>
+  <p>Yes. RSS support is funded by NIHR and provided at no cost to you. You do not need to be an existing NIHR grant holder, and there is no obligation to apply for NIHR funding as a result of working with us — though many companies do.</p>
+</section>
+
+<section id="section2">
+  <h2>Section 2: Are You Eligible? — The Three Checks</h2>
+  <p>Before we can offer substantive research support, we confirm that your company and innovation meet NIHR's eligibility requirements. If you do not yet qualify, we will point you to the right support for your stage (see Appendix A).</p>
+
+  <h3>Check 1: Are you an eligible company?</h3>
+  <p>Your organisation must be registered as a limited company, community interest company (CIC), or equivalent with Companies House.</p>
+  <table>
+    <caption>SME size thresholds used by NIHR</caption>
+    <thead><tr><th>Company size</th><th>Employees</th><th>Annual turnover</th><th>Eligible for NIHR RSS?</th></tr></thead>
+    <tbody>
+      <tr><td>Micro</td><td>Fewer than 10</td><td>Up to €2 million</td><td>Yes</td></tr>
+      <tr><td>Small</td><td>10–49</td><td>Up to €10 million</td><td>Yes</td></tr>
+      <tr><td>Medium</td><td>50–249</td><td>Up to €50 million</td><td>Yes</td></tr>
+      <tr><td>Large</td><td>250 or more</td><td>Over €50 million</td><td>No — not eligible as an SME</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Charity, CIC, or social enterprise?</strong> Eligible if registered as a limited company or CIC with Companies House and within size thresholds.</p>
+  <p><strong>Sole trader or partnership?</strong> Not currently eligible as a lead organisation. Registering as a limited company is straightforward via Companies House.</p>
+  <p><strong>Check your status:</strong> <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">find-and-update.company-information.service.gov.uk</a> — confirm 'Active' status and company type (Ltd, PLC, or CIC).</p>
+
+  <h3>Check 2: Is your technology at the right stage? (TRL3 minimum)</h3>
+  <p>NIHR support is for innovations beyond pure concept — there must be at least some experimental or feasibility evidence. This is Technology Readiness Level 3 (TRL3), or 'proof of concept'. If below TRL3, we signpost you to routes such as Innovate UK feasibility funding. See Section 7 for a plain-language TRL explainer.</p>
+
+  <h3>Check 3: Is your research question within NIHR scope?</h3>
+  <p>The RSS supports research into effectiveness, safety, feasibility, and implementation of health and care interventions — including clinical trials, real-world evaluations, feasibility studies, health economics, and patient and public involvement. We do not cover basic laboratory science, commercial market research, or business development.</p>
+</section>
+
+<section id="section3">
+  <h2>Section 3: What We Can — and Cannot — Help With</h2>
+  <p>The RSS provides methodological and research design expertise. We are researchers, not consultants — our role is to strengthen the evidence base for your innovation, not to run your business or write your funding application.</p>
+
+  <h3>What we can help you with</h3>
+  <table>
+    <thead><tr><th>Area of support</th><th>What this means for you</th></tr></thead>
+    <tbody>
+      <tr><td>Research question design</td><td>Turning a business hypothesis into a clear, testable research question that NIHR and other funders take seriously</td></tr>
+      <tr><td>Study design</td><td>Advising on the most appropriate study type (feasibility trial, RCT, observational study, real-world evidence)</td></tr>
+      <tr><td>Clinical trial support</td><td>Trial design, sample size, endpoints, regulatory considerations, clinical site requirements</td></tr>
+      <tr><td>Health economics</td><td>Cost-effectiveness modelling, NHS cost impact analysis, value for money framing</td></tr>
+      <tr><td>Patient and public involvement (PPIE)</td><td>Introducing PPIE standards and networks; embedding involvement from the start</td></tr>
+      <tr><td>Statistics and methodology</td><td>Statistical approaches, power calculations, analysis plans</td></tr>
+      <tr><td>AI and digital health evaluation</td><td>Specialist support for SaMD, AI-based tools, NICE Evidence Standards Framework alignment</td></tr>
+      <tr><td>Regulatory and ethics scoping</td><td>High-level guidance on MHRA, NICE, and ethics requirements; signposting to specialists</td></tr>
+      <tr><td>Funding route navigation</td><td>Identifying the most appropriate NIHR funding stream for your technology, TRL, and question</td></tr>
+      <tr><td>Application feedback</td><td>Reviewing draft sections — research design, methodology, PPIE</td></tr>
+      <tr><td>NHS and infrastructure connections</td><td>Introductions to NHS clinical partners, HRCs, RDN sites, and other infrastructure</td></tr>
+    </tbody>
+  </table>
+
+  <h3>What falls outside our scope</h3>
+  <table>
+    <thead><tr><th>Not in RSS scope</th><th>Why — and where to go instead</th></tr></thead>
+    <tbody>
+      <tr><td>Writing your application for you</td><td>Applications must reflect your own research and vision — we advise and review, you write. Try your local Growth Hub or Innovate UK Business Growth.</td></tr>
+      <tr><td>Commercial strategy, pricing, or market research</td><td>Business consultancy, not research design — try your local Growth Hub, KTN, or Catapult Centre.</td></tr>
+      <tr><td>Legal advice, contracts, or IP negotiation</td><td>Seek specialist advice (Appendix A). UK IPO offers a free IP Audit for qualifying SMEs.</td></tr>
+      <tr><td>Pre-clinical or laboratory-only research (TRL1–2)</td><td>NIHR funds applied research from TRL3 upwards — consider UKRI/Innovate UK feasibility funding.</td></tr>
+      <tr><td>Investment readiness or pitch preparation</td><td>British Business Bank, Innovate UK Business Growth, Creative UK offer this support.</td></tr>
+      <tr><td>Regulatory submissions to MHRA or NICE</td><td>We help you plan the evidence; submission is managed via MHRA Innovation Office or NICE Advice.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="section4">
+  <h2>Section 4: How to Work With Us — Your Journey with the RSS</h2>
+  <p>Here is what to expect when you engage with the RSS, from first enquiry through to application support and beyond.</p>
+
+  <div class="journey-step"><div class="journey-num">1</div><div><strong>Get in touch.</strong> Contact us via NIHR's NHS Innovation Service or your regional RSS Hub. Acknowledgement within two working days. Tell us briefly about your company, technology, and support needs.</div></div>
+  <div class="journey-step"><div class="journey-num">2</div><div><strong>Quick eligibility check.</strong> We confirm Companies House registration, SME size criteria, and TRL3+. Usually one to two days. Have your Companies House number ready.</div></div>
+  <div class="journey-step"><div class="journey-num">3</div><div><strong>Scoping conversation.</strong> A 30–60 minute call to understand your innovation, research question, team, and needs. Completing the Innovator Engagement Form (Appendix B) in advance helps.</div></div>
+  <div class="journey-step"><div class="journey-num">4</div><div><strong>Agreed support plan.</strong> We confirm what we will provide, who leads it, and the timeframe — in writing.</div></div>
+  <div class="journey-step"><div class="journey-num">5</div><div><strong>Active research support.</strong> Study design workshops, health economics scoping, PPIE facilitation, application draft reviews, bid clinics, NHS infrastructure connections.</div></div>
+  <div class="journey-step"><div class="journey-num">6</div><div><strong>Signposting.</strong> Where needs fall outside our scope, we provide specific, contextualised signposting — with named contacts, not just links.</div></div>
+  <div class="journey-step"><div class="journey-num">7</div><div><strong>Staying connected.</strong> After submission, we stay in touch for future applications, wider NIHR connections, and potential case studies.</div></div>
+</section>
+
+<section id="section5">
+  <h2>Section 5: What You Can Expect From Us</h2>
+  <table>
+    <thead><tr><th>You can expect...</th><th>What this looks like</th></tr></thead>
+    <tbody>
+      <tr><td>A prompt, helpful first response</td><td>Acknowledgement within two working days, a named contact, a clear next step</td></tr>
+      <tr><td>Straight talking about eligibility</td><td>Clear feedback if not yet eligible, plus next steps</td></tr>
+      <tr><td>Expert, tailored advice</td><td>Support from genuine experts — clinical trials, health economics, AI/digital health, PPIE, social care research</td></tr>
+      <tr><td>Respect for your commercial position</td><td>Confidentiality respected; no sharing without consent</td></tr>
+      <tr><td>Honesty about what we can offer</td><td>Honest advice now is better than a failed application later</td></tr>
+      <tr><td>A collaborative, not prescriptive, approach</td><td>We strengthen your research, not take it over</td></tr>
+      <tr><td>Connections to the wider NIHR ecosystem</td><td>HealthTech Research Centres, RDN sites, BRCs, clinical partners</td></tr>
+      <tr><td>Documented support</td><td>Agreements confirmed in writing</td></tr>
+    </tbody>
+  </table>
+
+  <h3>What we ask of you in return</h3>
+  <table>
+    <thead><tr><th>We ask you to...</th><th>Why this matters</th></tr></thead>
+    <tbody>
+      <tr><td>Be open about your technology and evidence base</td><td>Honesty about gaps helps us help you better</td></tr>
+      <tr><td>Lead your own application</td><td>The application needs to come from you, in your voice</td></tr>
+      <tr><td>Engage early</td><td>High-quality research design takes time — engage months before a deadline</td></tr>
+      <tr><td>Tell us if things change</td><td>So we can adapt our support</td></tr>
+      <tr><td>Provide feedback</td><td>Helps us serve the next company better</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="section6">
+  <h2>Section 6: Preparing for Your First Conversation — FAQs</h2>
+  <p>You do not need to have everything figured out before you contact us — but the more you can tell us, the quicker we can identify the right support.</p>
+
+  <h3>Useful things to think about first</h3>
+  <ul>
+    <li><strong>Your company:</strong> registration, employee count, sector</li>
+    <li><strong>Your innovation:</strong> what it does, what problem it solves, who it's for</li>
+    <li><strong>Your evidence:</strong> what you've tested and what it shows</li>
+    <li><strong>Your research question:</strong> the key question you want to answer</li>
+    <li><strong>Your clinical connections:</strong> NHS partner or clinical champion</li>
+    <li><strong>Your IP:</strong> owned by you, or involving a university</li>
+    <li><strong>Your funding history:</strong> previous NIHR, Innovate UK, or SBRI funding</li>
+    <li><strong>Your target funding:</strong> a specific call and its closing date</li>
+    <li><strong>Your timeline:</strong> key milestones over the next 12–24 months</li>
+  </ul>
+
+  <h3>Frequently asked questions</h3>
+  <div class="faq-item"><strong>We are very early stage — is it too soon to contact you?</strong>Never too early to have a conversation. If you are at TRL2 or below, we may not offer direct support yet — but we can point you toward getting to TRL3.</div>
+  <div class="faq-item"><strong>We do not have a clinical partner — does that matter?</strong>Most NIHR-funded research requires a clinical collaborator or NHS partner. We can help you think through what you need and potentially facilitate an introduction.</div>
+  <div class="faq-item"><strong>We are applying in six weeks — is it too late?</strong>Tight but not necessarily too late. Contact us immediately for an honest assessment. Engaging earlier always produces stronger applications.</div>
+  <div class="faq-item"><strong>We had a failed NIHR application before — can you still help?</strong>Absolutely. Understanding previous feedback and strengthening your next submission is exactly the kind of work we do.</div>
+  <div class="faq-item"><strong>We are worried about confidentiality.</strong>The RSS operates under strict data protection. We will not share your information without your explicit consent.</div>
+  <div class="faq-item"><strong>Do we need to apply for NIHR funding to work with you?</strong>No. There is no obligation to apply — our goal is to help you build the strongest possible evidence base.</div>
+  <div class="faq-item"><strong>We are a CIC or social enterprise — are we eligible?</strong>Yes, if registered as a limited company with Companies House and within SME size thresholds.</div>
+  <div class="faq-item"><strong>Our company is a university spinout — does anything change?</strong>No — spinouts are treated as any other SME. Your university's Technology Transfer Office may also be a useful contact.</div>
+</section>
+
+<section id="section7">
+  <h2>Section 7: Understanding Your Research Stage — Technology Readiness Levels (TRL)</h2>
+  <p>TRLs are a standard scale used by NIHR, Innovate UK, and most research funders to describe how mature a technology is — from TRL1 (basic concept) to TRL9 (proven in routine use).</p>
+  <div class="callout"><strong>TRL3</strong> is the minimum entry point for NIHR RSS support and NIHR i4i funding — you must have at least some experimental or feasibility evidence, not just a concept or computer model.</div>
+
+  <table>
+    <thead><tr><th>TRL</th><th>What it means</th><th>Health &amp; Care example</th><th>What this means for NIHR access</th></tr></thead>
+    <tbody>
+      <tr><td><span class="trl-badge">TRL 1</span></td><td>Basic scientific principles observed</td><td>Research shows a biomarker may indicate disease</td><td>Not yet eligible — seek UKRI basic research funding or university collaboration</td></tr>
+      <tr><td><span class="trl-badge">TRL 2</span></td><td>Possible application identified, no data yet</td><td>Theoretical breath sensor concept for cancer detection</td><td>Not yet eligible — consider Innovate UK feasibility grants, SetSquared, Northern Accelerator</td></tr>
+      <tr><td><span class="trl-badge">TRL 3</span></td><td>Proof of concept — lab/feasibility data</td><td>Prototype detects biomarker in controlled lab samples</td><td>NIHR RSS eligible — i4i (PDA, Connect, FAST), SBRI Healthcare</td></tr>
+      <tr><td><span class="trl-badge">TRL 4</span></td><td>Validated in a laboratory setting</td><td>Device validated on a larger sample set; safety profile started</td><td>RSS support — i4i PDA, FAST, SBRI Stage 1</td></tr>
+      <tr><td><span class="trl-badge">TRL 5</span></td><td>Validated in a near-clinical environment</td><td>Tested in clinical lab with real patient samples</td><td>RSS support — evaluation design, NHS site planning, PPIE, stats</td></tr>
+      <tr><td><span class="trl-badge">TRL 6</span></td><td>Prototype demonstrated in a real operational setting</td><td>Piloted in NHS outpatient clinic; early real-world data</td><td>RSS support — health economics, implementation planning, NICE ESF</td></tr>
+      <tr><td><span class="trl-badge">TRL 7</span></td><td>Near-final system tested at scale</td><td>Multi-site NHS trust evaluation complete</td><td>RSS support — MHRA/UKCA planning, RDN engagement</td></tr>
+      <tr><td><span class="trl-badge">TRL 8</span></td><td>Technology completed and qualified</td><td>UKCA marked; NICE evidence package submitted</td><td>RSS limited scope — signpost to NICE, NHS Supply Chain, Health Innovation Networks</td></tr>
+      <tr><td><span class="trl-badge">TRL 9</span></td><td>Proven in routine operational use</td><td>Device in routine NHS use; post-market surveillance</td><td>RSS not typically relevant — signpost to NHS commercial teams and trade bodies</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Seven questions to help you work out your TRL</h3>
+  <table>
+    <thead><tr><th>Question</th><th>If YES, you are likely at...</th></tr></thead>
+    <tbody>
+      <tr><td>Do you have documented experimental results or laboratory data?</td><td>TRL 3+</td></tr>
+      <tr><td>Has your technology been tested outside a purely theoretical context?</td><td>TRL 3+</td></tr>
+      <tr><td>Have you conducted a pilot study, feasibility trial, or prototype test?</td><td>TRL 4+</td></tr>
+      <tr><td>Has your product been tested with real patients or service users?</td><td>TRL 5+</td></tr>
+      <tr><td>Has it been tested or deployed in an NHS or equivalent healthcare setting?</td><td>TRL 6+</td></tr>
+      <tr><td>Have you received any regulatory approvals (CE, UKCA, MHRA registration)?</td><td>TRL 7+</td></tr>
+      <tr><td>Is your product currently in routine clinical use?</td><td>TRL 8+</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="section8">
+  <h2>Section 8: NIHR Funding Routes for Companies</h2>
+  <p>The RSS is not a funder, but we work closely with NIHR's funding programmes and can help you find the right route.</p>
+  <div class="callout">Always check <a href="https://www.nihr.ac.uk" target="_blank">nihr.ac.uk</a> for current open calls and up-to-date eligibility requirements before starting an application.</div>
+
+  <table>
+    <thead><tr><th>Funding</th><th>What it funds</th><th>Who can apply</th><th>Funding level</th><th>Min. TRL</th></tr></thead>
+    <tbody>
+      <tr><td>NIHR i4i — Product Development Award (PDA)</td><td>Clinical product development and real-world evaluation. Up to 100% funding for SMEs/NHS, no matched funding required</td><td>SMEs, NHS, universities</td><td>No maximum</td><td>TRL 3</td></tr>
+      <tr><td>NIHR i4i — Connect</td><td>De-risk your project for follow-on investment; prototype development, small studies, CE/UKCA, PPIE, IP, training</td><td>SMEs (primary audience)</td><td>£50,000–£150,000 / 6–12 months</td><td>TRL 3</td></tr>
+      <tr><td>NIHR i4i — FAST</td><td>Small, focused award to answer a single specific research question</td><td>SMEs, NHS, universities</td><td>Typically £50,000–£100,000 / 6–12 months</td><td>TRL 3</td></tr>
+      <tr><td>NIHR Innovation Catalyst</td><td>Translational research — MedTech, digital health, biotech, femtech, social care</td><td>SMEs, NHS, universities, charities</td><td>No maximum cap</td><td>TRL 4</td></tr>
+      <tr><td>NIHR Research for Patient Benefit (RfPB)</td><td>Applied research on NHS/social care questions; good for social care SMEs and CICs</td><td>SMEs co-apply with NHS/academic partners</td><td>Up to £500,000 / 36 months</td><td>TRL 4</td></tr>
+      <tr><td>SBRI Healthcare</td><td>NHS procurement-based competition — Stage 1 (feasibility) and Stage 2 (development)</td><td>SMEs</td><td>S1: ~£100k | S2: ~£1m</td><td>TRL 3</td></tr>
+      <tr><td>Innovate UK Biomedical Catalyst</td><td>SMEs developing therapeutics, devices, diagnostics, digital health</td><td>SMEs</td><td>Up to £2 million</td><td>TRL 3</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout"><strong>A note on NIHR i4i THRIVE:</strong> If you're an academic researcher considering setting up a company around your research, the i4i THRIVE pilot supports exactly that transition. Contact the RSS team or visit <a href="https://www.nihr.ac.uk/i4i" target="_blank">nihr.ac.uk/i4i</a>.</div>
+</section>
+
+<section id="appendixA">
+  <h2>Appendix A: Business Support &amp; Signposting Directory</h2>
+  <p>This directory lists organisations that can support you at different stages of your development journey — especially where support with commercialisation, IP, or business finance is needed. NATIONAL resources are available across England; NORTH EAST resources are specific to North East England and North Cumbria.</p>
+
+  <h3>1. NIHR &amp; NHS Research Infrastructure [NATIONAL]</h3>
+  <table>
+    <thead><tr><th>Organisation</th><th>What it offers</th><th>Who it is for</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>NIHR Industry / LIIS</td><td>Free personal consultation — first port of call for NIHR funding, infrastructure, and services</td><td>All companies TRL3+</td><td><a href="mailto:industry@nihr.ac.uk">industry@nihr.ac.uk</a></td></tr>
+      <tr><td>NIHR Innovation Catalyst</td><td>Translational funding — no maximum cap</td><td>TRL4–7</td><td><a href="https://nihr.ac.uk/innovation-catalyst" target="_blank">nihr.ac.uk/innovation-catalyst</a></td></tr>
+      <tr><td>NIHR i4i (PDA, Connect, FAST)</td><td>Product development funding, 100% for SMEs</td><td>TRL3–6 SMEs</td><td><a href="https://nihr.ac.uk/i4i" target="_blank">nihr.ac.uk/i4i</a></td></tr>
+      <tr><td>NIHR Research for Patient Benefit (RfPB)</td><td>Applied NHS/social care research</td><td>TRL4–7</td><td><a href="https://nihr.ac.uk/rfpb" target="_blank">nihr.ac.uk/rfpb</a></td></tr>
+      <tr><td>NHS Innovation Accelerator (NIA)</td><td>Fellowship for scaling high-impact innovations</td><td>TRL7–9</td><td><a href="https://nhsaccelerator.com" target="_blank">nhsaccelerator.com</a></td></tr>
+      <tr><td>NIHR HealthTech Research Centres (HRCs)</td><td>14 NHS-based centres for evaluation</td><td>TRL4–7</td><td><a href="https://hrc-network.nihr.ac.uk" target="_blank">hrc-network.nihr.ac.uk</a></td></tr>
+      <tr><td>NIHR Research Delivery Network (RDN)</td><td>NHS research delivery support</td><td>TRL4–8</td><td><a href="https://rdn.nihr.ac.uk" target="_blank">rdn.nihr.ac.uk</a></td></tr>
+      <tr><td>NIHR Biomedical Research Centres (BRCs)</td><td>Preclinical to early-phase translation</td><td>TRL3–5</td><td><a href="https://nihr.ac.uk/brcs" target="_blank">nihr.ac.uk/brcs</a></td></tr>
+      <tr><td>NIHR Clinical Trials Units (CTUs)</td><td>Design and run rigorous clinical studies</td><td>TRL4–7</td><td><a href="https://ukcrc.org/clinical-trials-units" target="_blank">ukcrc.org/clinical-trials-units</a></td></tr>
+      <tr><td>NIHR Clinical Research Facilities (CRFs)</td><td>28 NHS facilities for early-phase studies</td><td>TRL3–5</td><td><a href="https://nihr.ac.uk/crfs" target="_blank">nihr.ac.uk/crfs</a></td></tr>
+      <tr><td>NIHR Expertise Partnering Service</td><td>Access to NIHR data, samples, recruitment</td><td>TRL4–7</td><td><a href="https://nihr.ac.uk/expertise-partnering" target="_blank">nihr.ac.uk/expertise-partnering</a></td></tr>
+      <tr><td>NHS Innovation Service</td><td>Digital platform — navigate NHS pathways</td><td>All stages</td><td><a href="https://innovation.nhs.uk" target="_blank">innovation.nhs.uk</a></td></tr>
+      <tr><td>NHS Accelerated Access Collaborative (AAC)</td><td>Reduces barriers to reach patients</td><td>TRL6–9</td><td><a href="https://england.nhs.uk/aac" target="_blank">england.nhs.uk/aac</a></td></tr>
+      <tr><td>NHS Supply Chain</td><td>NHS procurement route; SME webinars</td><td>TRL7–9</td><td><a href="https://supplychain.nhs.uk" target="_blank">supplychain.nhs.uk</a></td></tr>
+      <tr><td>Health Innovation Networks (HINs)</td><td>15 regional adoption/spread networks</td><td>TRL6–9</td><td><a href="https://thehealthinnovationnetwork.co.uk" target="_blank">thehealthinnovationnetwork.co.uk</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>NIHR HealthTech Research Centres — Locations and Specialisms</h3>
+  <table>
+    <thead><tr><th>Location</th><th>Specialism</th></tr></thead>
+    <tbody>
+      <tr><td>Newcastle</td><td>Diagnostic and Technology Evaluation</td></tr>
+      <tr><td>Leeds</td><td>Accelerated Surgical Care</td></tr>
+      <tr><td>Manchester</td><td>Emergency and Acute Care</td></tr>
+      <tr><td>Sheffield</td><td>Long Term Conditions; Paediatrics and Child Health</td></tr>
+      <tr><td>Nottingham</td><td>Mental Health (MindTech); Rehabilitation</td></tr>
+      <tr><td>Birmingham</td><td>Devices, Digital and Robotics</td></tr>
+      <tr><td>Cambridge</td><td>Brain Injury</td></tr>
+      <tr><td>Oxford</td><td>Community Healthcare</td></tr>
+      <tr><td>Exeter</td><td>Sustainable Innovation</td></tr>
+      <tr><td>London</td><td>Cardiovascular and Respiratory Medicine; In Vitro Diagnostics; Brain Health</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2. Innovate UK / UKRI [NATIONAL]</h3>
+  <table>
+    <thead><tr><th>Organisation</th><th>What it offers</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>Innovate UK</td><td>National innovation agency — business-led funding</td><td><a href="https://innovateuk.ukri.org" target="_blank">innovateuk.ukri.org</a></td></tr>
+      <tr><td>Innovate UK Biomedical Catalyst</td><td>Up to £2m for SMEs</td><td><a href="https://iuk.ktn-uk.org/biomedical-catalyst" target="_blank">iuk.ktn-uk.org/biomedical-catalyst</a></td></tr>
+      <tr><td>SBRI Healthcare</td><td>NHS procurement competition, built for SMEs</td><td><a href="https://sbri-healthcare.org" target="_blank">sbri-healthcare.org</a></td></tr>
+      <tr><td>SBRI Healthcare VC Readiness Programme</td><td>For female founders — addresses VC funding gap</td><td><a href="https://sbri-healthcare.org" target="_blank">sbri-healthcare.org</a></td></tr>
+      <tr><td>Innovate UK Business Growth</td><td>Commercialisation, IP, investment readiness advice</td><td><a href="https://iubusinessgrowth.ukri.org" target="_blank">iubusinessgrowth.ukri.org</a></td></tr>
+      <tr><td>UKRI Innovation Funding Service</td><td>Searchable database of open competitions</td><td><a href="https://apply-for-innovation-funding.service.gov.uk" target="_blank">apply-for-innovation-funding.service.gov.uk</a></td></tr>
+      <tr><td>Start Up Loans Company</td><td>Loans up to £25,000 for start-ups &lt; 36 months</td><td><a href="https://startuploans.co.uk" target="_blank">startuploans.co.uk</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>3. Life Sciences Networks &amp; Trade Bodies [NATIONAL]</h3>
+  <table>
+    <thead><tr><th>Organisation</th><th>What it offers</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>ABHI</td><td>Market access, regulation, NHS engagement</td><td><a href="https://abhi.org.uk" target="_blank">abhi.org.uk</a></td></tr>
+      <tr><td>BioIndustry Association (BIA)</td><td>Policy, networking, events</td><td><a href="https://bioindustry.org" target="_blank">bioindustry.org</a></td></tr>
+      <tr><td>Knowledge Transfer Network (KTN)</td><td>Connects innovators with funding, expertise, markets</td><td><a href="https://ktn-uk.org" target="_blank">ktn-uk.org</a></td></tr>
+      <tr><td>Medicines Discovery Catapult</td><td>Supports SMEs commercialising medicines</td><td><a href="https://md.catapult.org.uk" target="_blank">md.catapult.org.uk</a></td></tr>
+      <tr><td>Cell and Gene Therapy Catapult</td><td>Advanced therapy development support</td><td><a href="https://ct.catapult.org.uk" target="_blank">ct.catapult.org.uk</a></td></tr>
+      <tr><td>LifeArc</td><td>Charity funder for rare diseases, drug-resistant infections</td><td><a href="https://lifearc.org" target="_blank">lifearc.org</a></td></tr>
+      <tr><td>Macmillan Ventures</td><td>Cancer-focused venture funding</td><td><a href="https://macmillan.org.uk/macmillan-ventures" target="_blank">macmillan.org.uk/macmillan-ventures</a></td></tr>
+      <tr><td>Bionow</td><td>North of England life sciences network</td><td><a href="https://bionow.co.uk" target="_blank">bionow.co.uk</a></td></tr>
+      <tr><td>Northern Health Science Alliance (NHSA)</td><td>Connects industry with academic/NHS expertise</td><td><a href="https://thenhsa.co.uk" target="_blank">thenhsa.co.uk</a></td></tr>
+      <tr><td>AI Edge Hub</td><td>Signposting and seminars for AI/digital health innovators</td><td>Via NHS Innovation Service</td></tr>
+      <tr><td>National Centre for Ageing (NICA)</td><td>Signposting for ageing-focused innovations</td><td><a href="https://ncl.ac.uk/ageing" target="_blank">ncl.ac.uk/ageing</a></td></tr>
+      <tr><td>National Innovation Centre for Data (NICD)</td><td>Data infrastructure and expertise for health SMEs</td><td><a href="https://ncl.ac.uk/data" target="_blank">ncl.ac.uk/data</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>4. Regulatory &amp; Market Access [NATIONAL]</h3>
+  <table>
+    <thead><tr><th>Organisation</th><th>What it offers</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>MHRA Innovation Office</td><td>Pre-application regulatory advice (fee-based)</td><td><a href="https://mhra.gov.uk/about-us/mhra-innovation-office" target="_blank">mhra.gov.uk/mhra-innovation-office</a></td></tr>
+      <tr><td>NICE Advice</td><td>Fee-based early guidance on NHS market access</td><td><a href="https://nice.org.uk/nice-advice-service" target="_blank">nice.org.uk/nice-advice-service</a></td></tr>
+      <tr><td>UKCA Marking / BSI Certification</td><td>Required marking for NHS procurement</td><td><a href="https://gov.uk/guidance/using-the-ukca-marking" target="_blank">gov.uk/using-the-ukca-marking</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>5. IP &amp; Commercialisation [NATIONAL]</h3>
+  <table>
+    <thead><tr><th>Organisation</th><th>What it offers</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>UK Intellectual Property Office (IPO)</td><td>Patents, trademarks, design rights; free IP Audit</td><td><a href="https://ipo.gov.uk/ip-for-business" target="_blank">ipo.gov.uk/ip-for-business</a></td></tr>
+      <tr><td>Business & IP Centre (BIPC)</td><td>Free IP and business advice</td><td><a href="https://bipc.bl.uk" target="_blank">bipc.bl.uk</a></td></tr>
+      <tr><td>Enterprise Europe Network (EEN)</td><td>International partnership brokering</td><td><a href="https://een.ec.europa.eu" target="_blank">een.ec.europa.eu</a></td></tr>
+      <tr><td>SetSquared Partnership</td><td>University business accelerator</td><td><a href="https://setsquared.co.uk" target="_blank">setsquared.co.uk</a></td></tr>
+      <tr><td>Northern Accelerator</td><td>University spin-out support across the North</td><td><a href="https://northernaccelerator.org" target="_blank">northernaccelerator.org</a></td></tr>
+      <tr><td>British Business Bank</td><td>Loans, equity, guarantees</td><td><a href="https://british-business-bank.co.uk" target="_blank">british-business-bank.co.uk</a></td></tr>
+      <tr><td>Leeds Angels</td><td>Angel network, £10k–£100k, pre-revenue/seed</td><td><a href="https://leedsangels.co.uk" target="_blank">leedsangels.co.uk</a></td></tr>
+      <tr><td>Creative UK</td><td>Funding, mentorship, investment readiness</td><td><a href="https://wearecreative.uk" target="_blank">wearecreative.uk</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>6. General Business Support [NATIONAL]</h3>
+  <table>
+    <thead><tr><th>Organisation</th><th>What it offers</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>Local Growth Hubs (38 across England)</td><td>Free impartial signposting; first port of call</td><td><a href="https://businesssupport.gov.uk/growth-hub" target="_blank">businesssupport.gov.uk/growth-hub</a></td></tr>
+      <tr><td>Female Founders</td><td>Investment support and network</td><td><a href="https://female-founders.org" target="_blank">female-founders.org</a></td></tr>
+      <tr><td>Young Enterprise</td><td>Programmes for founders 25 and under</td><td><a href="https://young-enterprise.org.uk" target="_blank">young-enterprise.org.uk</a></td></tr>
+      <tr><td>Carbon Trust</td><td>Support for sustainability</td><td><a href="https://carbontrust.com" target="_blank">carbontrust.com</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>7. Social Enterprise &amp; CIC Support [NATIONAL]</h3>
+  <table>
+    <thead><tr><th>Organisation</th><th>What it offers</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>Key Fund</td><td>Loans up to £300,000 for social enterprises</td><td><a href="https://thekeyfund.co.uk" target="_blank">thekeyfund.co.uk</a></td></tr>
+      <tr><td>Impact Loans England</td><td>Loans £20,000–£200,000</td><td><a href="https://bigissue.com/invest/impact-loans-england" target="_blank">bigissue.com/impact-loans-england</a></td></tr>
+      <tr><td>VCSE Energy Efficiency Scheme</td><td>Energy assessments and grants for VCSEs</td><td><a href="https://groundwork.org.uk/vcseenergyefficiency" target="_blank">groundwork.org.uk/vcseenergyefficiency</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>8. North East England &amp; North Cumbria Resources [NORTH EAST]</h3>
+  <table>
+    <thead><tr><th>Organisation</th><th>What it offers</th><th>Link</th></tr></thead>
+    <tbody>
+      <tr><td>Medilink North of England</td><td>Industry network for health and life sciences SMEs</td><td><a href="https://medilink.co.uk" target="_blank">medilink.co.uk</a></td></tr>
+      <tr><td>Diagnostics North East</td><td>Developing the region as a diagnostics innovation leader</td><td><a href="https://diagnosticsnortheast.org.uk" target="_blank">diagnosticsnortheast.org.uk</a></td></tr>
+      <tr><td>MedConnect North</td><td>Guides SMEs through NHS research/innovation pathway</td><td><a href="https://innovationpathway.healthinnovationnenc.org.uk/partner/medconnect-north" target="_blank">MedConnect North</a></td></tr>
+      <tr><td>North East Innovation Lab (Newcastle Hospitals)</td><td>NHS-embedded innovation lab (PCR, LAMP, lateral flow)</td><td><a href="https://commercial.newcastle-hospitals.nhs.uk/work-with-us/innovation-lab" target="_blank">Newcastle Innovation Lab</a></td></tr>
+      <tr><td>NovoPath (Newcastle Hospitals)</td><td>Commercial pathology laboratory</td><td><a href="https://ncl.ac.uk/translational-research/novopath" target="_blank">ncl.ac.uk/novopath</a></td></tr>
+      <tr><td>Newcastle University Innovations / ARROW</td><td>One-to-one expert support, R&D, research facilities</td><td><a href="https://ncl.ac.uk/newcastle-innovations" target="_blank">ncl.ac.uk/newcastle-innovations</a></td></tr>
+      <tr><td>North East Business and Innovation Centre (BIC)</td><td>Advice and training for start-ups</td><td><a href="https://ne-bic.co.uk" target="_blank">ne-bic.co.uk</a></td></tr>
+      <tr><td>North East Chamber of Commerce (NECC)</td><td>Business advice, networking, trade services</td><td><a href="https://necc.co.uk" target="_blank">necc.co.uk</a></td></tr>
+      <tr><td>The North East Enterprise Agency</td><td>Events, training, workshops</td><td><a href="https://neeal.co.uk" target="_blank">neeal.co.uk</a></td></tr>
+      <tr><td>PNE (Positive North East)</td><td>Support, advice, training for small businesses</td><td><a href="https://pne.org" target="_blank">pne.org</a></td></tr>
+      <tr><td>The Entrepreneur's Forum</td><td>Peer-to-peer mentoring and networking</td><td><a href="https://entrepreneursforum.net" target="_blank">entrepreneursforum.net</a></td></tr>
+      <tr><td>Scaleup North East</td><td>Advice/support for high-growth firms</td><td><a href="https://scaleupnortheast.co.uk" target="_blank">scaleupnortheast.co.uk</a></td></tr>
+      <tr><td>North East Business Support (TEDCO)</td><td>Business and start-up support</td><td><a href="https://tedco.org" target="_blank">tedco.org</a></td></tr>
+      <tr><td>Design Network North</td><td>Advice for design-led businesses</td><td><a href="https://designnetworknorth.org" target="_blank">designnetworknorth.org</a></td></tr>
+      <tr><td>Northern Powerhouse Investment Fund (NPIF)</td><td>Loans £25k–£750k; equity £50k–£2m</td><td><a href="https://british-business-bank.co.uk/npif" target="_blank">british-business-bank.co.uk/npif</a></td></tr>
+      <tr><td>Business Enterprise Fund — North East</td><td>For NE SMEs turned down by high street banks, £500–£250,000</td><td><a href="https://gov.uk/business-finance-support/business-enterprise-fund-north-east-england" target="_blank">gov.uk Business Enterprise Fund</a></td></tr>
+      <tr><td>PXN Ventures</td><td>Praeseed investment for early-stage companies</td><td><a href="https://pxnventures.co.uk" target="_blank">pxnventures.co.uk</a></td></tr>
+      <tr><td>North Star Ventures — NE Spinout Inspire Fund</td><td>£100k–£1m for charities/social enterprises</td><td><a href="https://northstarventures.co.uk/north-east-spinout-inspire-fund" target="_blank">North Star Ventures</a></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="appendixB">
+  <h2>Appendix B: Innovator Engagement Form</h2>
+  <p>When you first engage with the RSS, we may ask you to complete this form. It helps us understand your company, innovation, evidence base, and support needs. You can fill it in and send it in advance, or go through it together in your first conversation.</p>
+  <div class="callout">Please do not include any unprotected intellectual property in this form. Your information is handled in line with UK GDPR and will not be shared without your explicit consent. Learn more: <a href="https://nihr.ac.uk/support-and-services/research-support-service" target="_blank">nihr.ac.uk/research-support-service</a></div>
+
+  <h3>Section 1: Your Company</h3>
+  <ul>
+    <li>Company name (as registered with Companies House)</li>
+    <li>Companies House number</li>
+    <li>Company type: Limited Company / CIC / Other</li>
+    <li>Number of employees</li>
+    <li>Annual turnover (approximate)</li>
+    <li>Company size: Micro / Small / Medium / Large</li>
+    <li>University spinout or start-up? (Yes/No — which university?)</li>
+    <li>Intellectual property: patent, trademark, copyright, licensed, under negotiation, none, other</li>
+  </ul>
+
+  <h3>Section 2: Previous Funding</h3>
+  <ul>
+    <li>Previous NIHR funding (stream, date, amount)</li>
+    <li>Previous Innovate UK funding (call, date, amount)</li>
+    <li>Other significant public funding</li>
+    <li>Other investment: VC, Angel/SEIS, Crowdfunding, Other</li>
+    <li>Additional funding sought — amount and target timeline</li>
+  </ul>
+
+  <h3>Section 3: Your Innovation</h3>
+  <ul>
+    <li>Plain-language description — what problem it solves, who it's for</li>
+    <li>Partnerships: NHS Clinical Entrepreneurs Programme, Health Innovation Network, HRC, other</li>
+    <li>NHS/health and care engagement to date</li>
+    <li>Market and investment readiness: pitch deck, market assessment, competitor analysis, commercial collaborators</li>
+    <li>Unique Selling Point (USP)</li>
+  </ul>
+
+  <h3>Section 4: Your Development Stage</h3>
+  <ul>
+    <li>Stage: idea/concept, prototype, MVP, piloted, commercially available</li>
+    <li>Testing, validation, or implementation work to date</li>
+    <li>Current TRL (1–9, or best estimate)</li>
+    <li>Commercialisation stage</li>
+  </ul>
+
+  <h3>Section 5: Your Evidence</h3>
+  <ul>
+    <li>Published data, evaluations, pilot reports, or case studies</li>
+  </ul>
+
+  <h3>Section 6: Regulatory &amp; Compliance</h3>
+  <ul>
+    <li>Regulatory requirements: MHRA, CQC, GDPR, UKCA/CE marking, other</li>
+    <li>Regulatory steps completed or underway</li>
+    <li>MHRA approvals, trial phase, trial sites (if applicable)</li>
+  </ul>
+
+  <h3>Section 7: What Support Are You Looking For?</h3>
+  <ul>
+    <li>Research question design</li>
+    <li>Study design / clinical trial support</li>
+    <li>Health economics</li>
+    <li>PPIE</li>
+    <li>Regulatory / ethics guidance (scoping)</li>
+    <li>AI / digital health evaluation</li>
+    <li>Funding route identification</li>
+    <li>Application review and feedback</li>
+    <li>Connections to NHS partners or infrastructure</li>
+    <li>Specific challenge / target NIHR funding call and closing date</li>
+  </ul>
+
+  <h3>Section 8: Your Contact Details</h3>
+  <ul>
+    <li>Name, role/job title, organisation, email, phone</li>
+  </ul>
+
+  <p style="font-size:0.85rem; color:#555;">By completing this form, you agree that your information may be shared with NIHR and NIHR RSS Hubs for research support and service improvement purposes, in line with UK GDPR. NIHR Privacy Policy: <a href="https://nihr.ac.uk/documents/nihr-privacy-policy/12242" target="_blank">nihr.ac.uk/nihr-privacy-policy</a></p>
+
+  <a class="back-top" href="#top">&uarr; Back to top</a>
+</section>
+
+</main>
+
+<footer>
+  <p>NIHR Research Support Service (RSS) &mdash; Working with the RSS: A Guide for SMEs</p>
+  <p>Version 1.0 | July 2026 | Funded by the National Institute for Health and Care Research (NIHR)</p>
+  <p><a href="https://www.nihr.ac.uk" target="_blank">nihr.ac.uk</a></p>
+</footer>
+
+</body>
+</html>
