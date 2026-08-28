@@ -2,28 +2,266 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>RSS Service Menu & Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIHR Research Support Service | Service Menu</title>
+
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-    .button {
-      display: inline-block;
-      padding: 15px 25px;
-      margin: 15px;
-      font-size: 18px;
-      color: white;
-      background-color: #0066cc;
-      text-decoration: none;
-      border-radius: 8px;
+    :root {
+      --navy: #26346B;
+      --coral: #ED5B5F;
+      --putty: #F4EFE5;
+      --white: #FFFFFF;
+      --blue-flame: #3560AA;
+      --glove-blue: #C6E7F7;
+      --off-black: #333333;
     }
-    .button:hover { background-color: #004b99; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inclusive Sans", Arial, sans-serif;
+      color: var(--navy);
+      background: var(--white);
+    }
+
+    /* Header */
+    .header {
+      background: var(--white);
+      border-bottom: 4px solid var(--coral);
+      padding: 28px 6%;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nihr {
+      font-family: Arial, sans-serif;
+      font-weight: 900;
+      font-size: 64px;
+      line-height: 1;
+      letter-spacing: -5px;
+      color: var(--navy);
+    }
+
+    .divider {
+      width: 5px;
+      height: 75px;
+      background: var(--coral);
+    }
+
+    .rss-title {
+      font-size: 32px;
+      line-height: 1.05;
+      font-weight: 400;
+    }
+
+    /* Main content */
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 60px 30px 70px;
+    }
+
+    .intro {
+      background: var(--putty);
+      border-left: 6px solid var(--coral);
+      padding: 30px 35px;
+      margin-bottom: 45px;
+    }
+
+    .intro h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      font-weight: 700;
+    }
+
+    .intro p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--off-black);
+    }
+
+    /* Menu */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .menu-card {
+      text-decoration: none;
+      color: var(--navy);
+      background: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: 4px;
+      padding: 30px 25px;
+      min-height: 190px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.2s ease;
+    }
+
+    .menu-card:hover {
+      background: var(--navy);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    .menu-card .number {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--coral);
+    }
+
+    .menu-card:hover .number {
+      color: var(--white);
+    }
+
+    .menu-card h2 {
+      font-size: 23px;
+      margin: 0 0 12px;
+    }
+
+    .menu-card p {
+      font-size: 16px;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .arrow {
+      font-size: 28px;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .header {
+        padding: 22px;
+      }
+
+      .nihr {
+        font-size: 45px;
+      }
+
+      .divider {
+        height: 55px;
+      }
+
+      .rss-title {
+        font-size: 24px;
+      }
+
+      .menu {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 40px 20px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <h1>Welcome to RSS Service Menu</h1>
-  <p>Please choose an option below:</p>
-  
-  <a class="button" href="World_institutions_colored_map_2025%201.html">View World Map</a>
-  <a class="button" href="rss-service-menu.html">View Service Menu</a>
-  <a class="button" href="RSS-SME-Guide.html">View SME Guide</a>
+
+  <header class="header">
+
+    <!-- NIHR wordmark -->
+    <div class="nihr">NIHR</div>
+
+    <div class="divider"></div>
+
+    <div class="rss-title">
+      Research<br>
+      Support Service
+    </div>
+
+  </header>
+
+
+  <main class="container">
+
+    <section class="intro">
+      <h1>RSS Service Menu</h1>
+      <p>
+        Welcome to the NIHR Research Support Service.
+        Please choose an option below.
+      </p>
+    </section>
+
+
+    <section class="menu">
+
+      <a class="menu-card"
+         href="World_institutions_colored_map_2025%201.html">
+
+        <div>
+          <div class="number">01</div>
+          <h2>World Map</h2>
+          <p>
+            Explore the RSS network and partner institutions.
+          </p>
+        </div>
+
+        <div class="arrow">→</div>
+
+      </a>
+
+
+      <a class="menu-card"
+         href="rss-service-menu.html">
+
+        <div>
+          <div class="number">02</div>
+          <h2>RSS Service Menu</h2>
+          <p>
+            Explore the support and expertise available through RSS.
+          </p>
+        </div>
+
+        <div class="arrow">→</div>
+
+      </a>
+
+
+      <a class="menu-card"
+         href="RSS-SME-Guide.html">
+
+        <div>
+          <div class="number">03</div>
+          <h2>SME Guide</h2>
+          <p>
+            Information and guidance for SMEs seeking RSS support.
+          </p>
+        </div>
+
+        <div class="arrow">→</div>
+
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    NIHR Research Support Service
+  </footer>
+
 </body>
 </html>
