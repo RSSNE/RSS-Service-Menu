@@ -11,6 +11,7 @@
       --blue: #005eb8;
       --light-blue: #eaf3fb;
       --red: #e94b4b;
+      --cream: #f7f3eb;
       --white: #ffffff;
       --text: #243447;
     }
@@ -30,16 +31,18 @@
     header {
       background: var(--navy);
       color: var(--white);
-      padding: 22px 7%;
+      padding: 25px 7%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       border-bottom: 5px solid var(--red);
+      min-height: 120px;
     }
 
     header img {
-      height: 50px;
+      height: 85px;
       width: auto;
+      max-width: 100%;
       display: block;
     }
 
@@ -152,13 +155,16 @@
       font-size: 14px;
     }
 
+    /* Mobile */
     @media (max-width: 800px) {
+
       header {
         padding: 20px;
+        min-height: 95px;
       }
 
       header img {
-        height: 45px;
+        height: 65px;
       }
 
       main {
@@ -189,39 +195,57 @@
 
     <div class="intro">
       <h1>RSS Newcastle and Partners</h1>
+
       <p>
-        Welcome to the Research Support Service resources and services.
-        Please select an option below to continue.
+        Welcome to the Research Support Service.
+        Please select an option below to access our resources and services.
       </p>
     </div>
 
     <div class="menu">
 
       <a class="card" href="World_institutions_colored_map_2025%201.html">
+
         <div class="icon">◉</div>
+
         <h2>World Map</h2>
+
         <p>
           Explore the global map of institutions and relevant RSS activity.
         </p>
+
         <div class="arrow">View map →</div>
+
       </a>
 
+
       <a class="card" href="rss-service-menu.html">
+
         <div class="icon">+</div>
+
         <h2>Service Menu</h2>
+
         <p>
           Explore the RSS services, support and resources available to you.
         </p>
+
         <div class="arrow">View services →</div>
+
       </a>
 
+
       <a class="card" href="RSS-SME-Guide.html">
+
         <div class="icon">?</div>
+
         <h2>SME Guide</h2>
+
         <p>
           Find guidance and information for SMEs engaging with RSS support.
         </p>
+
         <div class="arrow">View guide →</div>
+
       </a>
 
     </div>
